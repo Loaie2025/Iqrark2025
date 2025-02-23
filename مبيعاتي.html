@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إقرارك - المبيعات</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: black;
+        }
+         .logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 200px;
+        }
+
+        .navbar {
+            background-color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #001F3F;
+            font-weight: bold;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .buttons button, .add-invoice {
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            background-color: white;
+            color: #001F3F;
+            border: 1px solid #001F3F;
+            border-radius: 5px;
+        }
+        .buttons .active {
+            background-color: #001F3F;
+            color: white;
+        }
+        .top-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .add-invoice {
+            background-color: #008F7A;
+            color: white;
+            margin-right: auto;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #001F3F;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="#" style="color: #008F7A; text-decoration: underline;">الرئيسية</a></li>
+                    <li><a href="#">الفواتير</a></li>
+                    <li><a href="#">المساعد الذكي</a></li>
+                    <li><a href="#">عن إقرارك</a></li>
+                    <li><a href="#">خدماتنا</a></li>
+                    <li><a href="#">تواصل معنا</a></li>
+                    <li><a href="#">الأسئلة الشائعة</a></li>
+                </ul>
+            </nav>
+    <img src="C:\Users\asus\Desktop\صفحات فيجما\هيدر_إقرارك-removebg-preview-removebg-preview.png" alt="شعار إقرارك" class="logo">
+
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="buttons">
+                <button>التقرير</button>
+                <button>الإقرار</button>
+                <button>التعديلات</button>
+                <button>المصروفات</button>
+                <button class="active">المبيعات</button>
+                <button>المشتريات</button>
+            </div>
+            <div class="top-section">
+                <h2 style='margin-bottom: 30px;'>مبيعاتي</h2>
+                <select id="quarter" style='width: 250px; height: 40px; margin-right: 20px;'>
+                    <option>الربع الأول</option>
+                    <option>الربع الثاني</option>
+                    <option>الربع الثالث</option>
+                    <option>الربع الرابع</option>
+                </select>
+                <button class="add-invoice">+ أضف فاتورة جديدة</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>تصنيف الضريبة</th>
+                        <th>رقم الفاتورة</th>
+                        <th>المبلغ قبل الضريبة</th>
+                        <th>الضريبة</th>
+                        <th>نسبة الضريبة</th>
+                        <th>الإجمالي</th>
+                        <th>الرقم الضريبي</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>خاضعة للنسبة الأساسية</td>
+                        <td>#12345</td>
+                        <td>310</td>
+                        <td>46.50</td>
+                        <td>15%</td>
+                        <td>356.50</td>
+                        <td>31120408330003</td>
+                    </tr>
+                    <tr>
+                        <td>خاضعة للنسبة الصفرية</td>
+                        <td>#45673</td>
+                        <td>1424</td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td>1424</td>
+                        <td>31120408330003</td>
+                    </tr>
+                    <tr>
+                        <td>معفاة</td>
+                        <td>#11121</td>
+                        <td>2003</td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td>2003</td>
+                        <td>31120408330003</td>
+                    </tr>
+                    <tr>
+                        <td>معفاة</td>
+                        <td>#47578</td>
+                        <td>1932</td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td>1932</td>
+                        <td>31120408330003</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

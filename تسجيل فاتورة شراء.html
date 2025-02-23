@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل فاتورة شراء</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: white;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid #0062cc;
+        }
+        .navbar a {
+            color: #004085;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        h2, .form-group label {
+            color: #004085;
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            width: 25%;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 70%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .full-width {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        .full-width label {
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 5px;
+            margin-left: auto;
+        }
+        .full-width textarea {
+            width: 100%;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0062cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        button:hover {
+            background-color: #004085;
+        }
+        .logo {
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">الرئيسية</a>
+        <a href="#">الفواتير</a>
+        <a href="#">المساعدة</a>
+        <a href="#">تواصل معنا</a>
+    <img src="C:\Users\asus\Desktop\صفحات فيجما\هيدر_إقرارك-removebg-preview-removebg-preview.png" alt="شعار إقرارك" class="logo">
+
+    </div>
+    <div class="container">
+        <h2>تسجيل فاتورة شراء</h2>
+        <form id="invoiceForm">
+            <div class="form-group">
+                <label>رقم الفاتورة:</label>
+                <input type="text" required>
+                <label style="margin-right: 20px;">تاريخ الفاتورة:</label>
+                <input type="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label>اسم المورد:</label>
+                <input type="text" required>
+                <label style="margin-right: 20px;">الرقم الضريبي:</label>
+                <input type="text" required>
+            </div>
+            
+            <div class="form-group">
+                <label>نوع عملية الشراء:</label>
+                <select>
+                    <option>اختيار</option>
+                    <option>منتج</option>
+                    <option>خدمة</option>
+                </select>
+                <label style="margin-right: 20px;">الكمية (عدد الوحدات):</label>
+                <input type="number" required>
+            </div>
+            
+            <div class="form-group full-width">
+                <label style="margin-left: auto;">وصف المنتج أو الخدمة:</label>
+                <textarea rows="3" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>السعر لكل وحدة:</label>
+                <input type="number" step="0.01" required>
+                <label style="margin-right: 20px;">الإجمالي قبل الضريبة:</label>
+                <input type="number" step="0.01" required>
+            </div>
+            
+            <div class="form-group">
+                <label>نسبة الضريبة:</label>
+                <input type="number" step="0.01" required>
+                <label style="margin-right: 20px;">إجمالي الضريبة:</label>
+                <input type="number" step="0.01" required>
+            </div>
+            
+            <button type="submit" style="color: white;">تسجيل الفاتورة</button>
+        </form>
+    </div>
+</body>
+</html>

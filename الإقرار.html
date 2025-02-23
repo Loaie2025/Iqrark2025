@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Tax Interface</title>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif;}
+    body {background:#f5f5f5;}
+    .container {max-width:1200px; margin:0 auto; padding:20px;}
+    .nav {display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;}
+    .nav-left {display:flex; align-items:center; gap:20px;}
+    .nav-menu {display:flex; gap:20px; list-style:none;}
+    .nav-menu a {text-decoration:none; color:#666;}
+    .nav-menu a.active {color:#20B2AA;}
+    .nav-right {display:flex; align-items:center; gap:15px;}
+    .tabs {display:flex; gap:10px; margin-bottom:20px;}
+    .tab {padding:8px 16px; border:1px solid #ddd; border-radius:4px; cursor:pointer; background:#fff;}
+    .tab.active {background:#1e2f65; color:#fff; border-color:#1e2f65;}
+    .controls {display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;}
+    .add-button {background:#20B2AA; color:#fff; border:none; padding:10px 20px; border-radius:4px; cursor:pointer;}
+    .quarter-select {padding:8px; border:1px solid #ddd; border-radius:4px; margin-right:10px;}
+    .table-container {background:#fff; border-radius:8px; box-shadow:0 2px 4px rgba(0,0,0,0.1); overflow:hidden;}
+    table {width:100%; border-collapse:collapse;}
+    th {background:#1e2f65; color:#fff; text-align:right; padding:12px;}
+    td {padding:12px; border-bottom:1px solid #ddd;}
+    tr:last-child td {border-bottom:none;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">
+        <img src="C:\Users\asus\Desktop\صفحات فيجما\هيدر_إقرارك-removebg-preview-removebg-preview.png" alt="Logo" height="60">
+        <ul class="nav-menu">
+          <li><a href="C:\Users\asus\Desktop\صفحات فيجما\splash.html" class="active">الرئيسية</a></li>
+         
+  <li><a href="C:\Users\asus\Desktop\صفحات فيجما\تسجيل الدخول.html">تسجيل الدخول</a></li>
+
+          <li><a href="C:\Users\asus\Desktop\صفحات فيجما\فريق العمل.html">عن إقرارك</a></li>
+          <li><a href="C:\Users\asus\Desktop\صفحات فيجما\باقات الاشتراك.html">خدماتنا</a></li>
+          <li><a href="C:\Users\asus\Desktop\صفحات فيجما\تحتاج مساعدة.html">تواصل معنا</a></li>
+          <li><a href="C:\Users\asus\Desktop\صفحات فيجما\الأسئلة الشائعة.html">الأسئلة الشائعة</a></li>
+
+          <li><a href="C:\Users\asus\Desktop\صفحات فيجما\إدارة الفواتير.html">الفواتير</a></li>
+
+
+
+        </ul>
+      </div>
+      <div class="nav-right">
+        <span>مؤسسة طويق للتجارة</span>
+        <span>👤</span>
+      </div>
+    </nav>
+    <div class="tabs">
+      <button class="tab active">المشتريات</button>
+      <button class="tab">المبيعات</button>
+      <button class="tab">المصروفات</button>
+      <button class="tab">التحويلات</button>
+      <button class="tab">الإقرار</button>
+      <button class="tab">التقرير</button>
+    </div>
+    <div class="controls">
+      <button class="add-button">+ اضف فاتورة جديدة</button>
+      <div>
+        <span>مشترياتي</span>
+        <select class="quarter-select">
+          <option>الربع الأول</option>
+          <option>الربع الثاني</option>
+          <option>الربع الثالث</option>
+          <option>الربع الرابع</option>
+        </select>
+      </div>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>تصنيف الضريبة</th>
+            <th>رقم الفاتورة</th>
+            <th>المبلغ قبل الضريبة</th>
+            <th>الضريبة</th>
+            <th>نسبة الضريبة</th>
+            <th>الإجمالي</th>
+            <th>الرقم الضريبي</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>خاضعة للنسبة الأساسية</td>
+            <td>#12345</td>
+            <td>310</td>
+            <td>46.50</td>
+            <td>15%</td>
+            <td>356.50</td>
+            <td>311204083300003</td>
+          </tr>
+          <tr>
+            <td>خاضعة للنسبة الصفرية</td>
+            <td>#45673</td>
+            <td>1424</td>
+            <td>0</td>
+            <td>0%</td>
+            <td>1424</td>
+            <td>311204083300003</td>
+          </tr>
+          <tr>
+            <td>معفاة</td>
+            <td>#11121</td>
+            <td>2003</td>
+            <td>0</td>
+            <td>0%</td>
+            <td>2003</td>
+            <td>311204083300003</td>
+          </tr>
+          <tr>
+            <td>معفاة</td>
+            <td>#47578</td>
+            <td>1932</td>
+            <td>0</td>
+            <td>0%</td>
+            <td>1932</td>
+            <td>311204083300003</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+      });
+    });
+    document.querySelector('.add-button').addEventListener('click', () => {
+      alert('Opening new invoice form...');
+    });
+    document.querySelector('.quarter-select').addEventListener('change', e => {
+      console.log('Selected quarter:', e.target.value);
+    });
+  </script>
+</body>
+</html>

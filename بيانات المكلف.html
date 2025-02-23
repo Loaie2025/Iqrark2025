@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيانات المكلف - Iqrarak</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: white;
+            width: 40%;
+            margin: auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        .logo {
+            hight: 200px;
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #002147;
+        }
+        .warning {
+            background: #ffdddd;
+            color: #d8000c;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            text-align: right;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: right;
+        }
+        button {
+            background: #002147;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #003366;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <img src="C:\Users\asus\Desktop\صفحات فيجما\هيدر_إقرارك-removebg-preview-removebg-preview.png" alt="شعار إقرارك" class="logo">
+
+        <h2>بيانات المكلف</h2>
+        <p class="warning">يجب التأكد من صحة البيانات لأنها ستظهر في التقارير المكلف</p>
+        <form id="iqrarakForm">
+            <label for="businessNumber">رقم الرخصة أو السجل التجاري*:</label>
+            <input type="text" id="businessNumber" required>
+            
+            <label for="revenue">متوسط الإيرادات*:</label>
+            <select id="revenue" required>
+                <option value="">اختر</option>
+                <option value="low">منخفض</option>
+                <option value="medium">متوسط</option>
+                <option value="high">مرتفع</option>
+            </select>
+            
+            <label for="taxNumber">الرقم الضريبي*:</label>
+            <input type="text" id="taxNumber" required>
+            
+            <label for="businessType">نوع النشاط التجاري*:</label>
+            <select id="businessType" required>
+                <option value="">اختر</option>
+                <option value="retail">تجزئة</option>
+                <option value="services">خدمات</option>
+                <option value="manufacturing">تصنيع</option>
+            </select>
+            
+            <label for="activityDate">تاريخ بدء النشاط*:</label>
+            <input type="date" id="activityDate" required>
+            
+            <label for="registrationDate">تاريخ السجل التجاري*:</label>
+            <input type="date" id="registrationDate" required>
+            
+            <button type="submit">حفظ</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة الفواتير والتقرير المالي</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            direction: rtl;
+            background-color: #f5f5f5;
+            padding: 20px;
+            color: #1a237e;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #1a237e;
+        }
+        .actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .primary-btn {
+            background-color: #0d1b4c;
+            color: white;
+        }
+        .primary-btn:hover {
+            background-color: #091436;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .close {
+            position: absolute;
+            left: 15px;
+            top: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .report-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .report-table th, .report-table td {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+            text-align: right;
+        }
+        .report-table th {
+            background-color: #f5f5f5;
+            font-weight: bold;
+        }
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .summary-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>إدارة الفواتير والتقرير المالي</h1>
+        <div class="actions">
+            <button class="primary-btn open-modal" data-modal="purchase">إضافة فاتورة شراء</button>
+          <li><a href="C:\Users\asus\Desktop\صفحات فيجما\تسجيل فاتورة شراء.html">تسجيل فاتورة شراء</a></li>
+          <li><a href="C:\Users\asus\Desktop\صفحات فيجما\مشترياتي.html">مشترياتي</a></li>
+
+
+            <button class="primary-btn open-modal" data-modal="sales">إضافة فاتورة مبيعات</button>
+          <li><a href="C:\Users\asus\Desktop\صفحات فيجما\تسجيل فاتورة بيع.html">تسجيل فاتورة بيع</a></li>
+          <li><a href="C:\Users\asus\Desktop\صفحات فيجما\مبيعاتي.html">مبيعاتي</a></li>
+
+        </div>
+
+        <div class="summary-cards">
+            <div class="summary-card">
+                <h3>إجمالي المبيعات</h3>
+                <p>٧٥٠،٠٠٠ ر.س</p>
+            </div>
+            <div class="summary-card">
+                <h3>إجمالي المشتريات</h3>
+                <p>٤٥٠،٠٠٠ ر.س</p>
+            </div>
+            <div class="summary-card">
+                <h3>صافي الربح</h3>
+                <p>٣٠٠،٠٠٠ ر.س</p>
+            </div>
+        </div>
+
+        <table class="report-table">
+            <thead>
+                <tr>
+                    <th>البند</th>
+                    <th>القيمة</th>
+                    <th>النسبة</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>المصروفات التشغيلية</td>
+                    <td>١٢٥،٠٠٠</td>
+                    <td>٪٢٥</td>
+                </tr>
+                <tr>
+                    <td>تكاليف الموظفين</td>
+                    <td>٢٥٠،٠٠٠</td>
+                    <td>٪٣٠</td>
+                </tr>
+                <tr>
+                    <td>المصروفات الإدارية</td>
+                    <td>٧٥،٠٠٠</td>
+                    <td>٪١٥</td>
+                </tr>
+                <tr class="total-row">
+                    <td>الإجمالي</td>
+                    <td>٤٥٠،٠٠٠</td>
+                    <td>٪١٠٠</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

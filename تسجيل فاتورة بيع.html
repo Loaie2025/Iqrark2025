@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل فاتورة بيع</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .navbar {
+            background-color: #002147;
+            overflow: hidden;
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background-color: #0056b3;
+            border-radius: 5px;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        h2 {
+            color: #002147;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        label {
+            flex: 1;
+            text-align: right;
+            padding: 5px;
+            font-weight: bold;
+            color: #002147;
+        }
+        input, select, textarea {
+            flex: 2;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        textarea {
+            resize: none;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">الرئيسية</a>
+        <a href="#">الفواتير</a>
+        <a href="#">الخدمات</a>
+        <a href="#">تواصل معنا</a>
+    <img src="C:\Users\asus\Desktop\صفحات فيجما\هيدر_إقرارك-removebg-preview-removebg-preview.png" alt="شعار إقرارك" class="logo">
+
+    </div>
+    <div class="container">
+        <h2>تسجيل فاتورة بيع</h2>
+        <form>
+            <div class="row">
+                <label>رقم الفاتورة:</label>
+                <input type="text">
+                <label>تاريخ الفاتورة:</label>
+                <input type="date">
+            </div>
+            <div class="row">
+                <label>اسم العميل:</label>
+                <input type="text">
+                <label>الرقم الضريبي:</label>
+                <input type="text">
+            </div>
+            <div class="row">
+                <label>نوع عملية البيع:</label>
+                <select>
+                    <option value="">اختر</option>
+                    <option value="بيع مباشر">بيع مباشر</option>
+                    <option value="خدمة">خدمة</option>
+                </select>
+                <label>الكمية (عدد الوحدات):</label>
+                <input type="number" min="1">
+            </div>
+            <div class="row">
+                <label>وصف المنتج أو الخدمة:</label>
+                <textarea></textarea>
+            </div>
+            <div class="row">
+                <label>السعر لكل وحدة:</label>
+                <input type="number" id="unitPrice" step="0.01">
+                <label>نسبة الضريبة:</label>
+                <input type="number" id="taxRate" step="0.01">
+            </div>
+            <div class="row">
+                <label>الإجمال قبل الضريبة:</label>
+                <input type="text" id="subtotal" readonly>
+                <label>إجمالي الضريبة:</label>
+                <input type="text" id="taxTotal" readonly>
+            </div>
+            <button type="button" onclick="calculateTotal()">حساب</button>
+        </form>
+    </div>
+    <script>
+        function calculateTotal() {
+            let unitPrice = parseFloat(document.getElementById('unitPrice').value) || 0;
+            let taxRate = parseFloat(document.getElementById('taxRate').value) || 0;
+            let subtotal = unitPrice;
+            let taxTotal = (subtotal * taxRate) / 100;
+            document.getElementById('subtotal').value = subtotal.toFixed(2);
+            document.getElementById('taxTotal').value = taxTotal.toFixed(2);
+        }
+    </script>
+</body>
+</html>
+

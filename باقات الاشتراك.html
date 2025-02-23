@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إشتراكات متعددة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        header {
+            background-color: white;
+            color: #0a2240;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .plans {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+        }
+        .plan {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            position: relative;
+        }
+        .pro {
+            top: -2px;
+        }
+        .pro::before {
+            content: "الأكثر شهرة";
+            position: absolute;
+            top: -15px;
+            right: 50%;
+            transform: translateX(50%);
+            background: #009688;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .plan h2 {
+            color: #0a2240;
+        }
+        .plan h3 {
+            color: #02735E;
+        }
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            text-align: right;
+        }
+        .plan ul li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .plan ul li::before {
+            content: "✔";
+            color: #02735E;
+            margin-right: 5px;
+        }
+        .plan button {
+            background-color: #0a2240;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .newsletter {
+            background: #009688;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin: 20px auto;
+        }
+        .newsletter p {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+        }
+        .newsletter input {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .newsletter button {
+            background-color: white;
+            color: #009688;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background: #0a2240;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+            position: relative;
+        }
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .logo {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>إشتراكات متعددة تناسب إحتياجك</h1>
+    </header>
+    <section class="plans">
+        <div class="plan basic">
+            <h2>الأساسية</h2>
+            <p>الخيار الأفضل للأعمال متناهية الصغر</p>
+            <h3>85 ريال شهريًا</h3>
+            <ul>
+                <li>مساعد ذكي</li>
+                <li>إصدار الفواتير</li>
+                <li>تقارير مالية</li>
+            </ul>
+            <button>إشترك الآن</button>
+        </div>
+        <div class="plan pro">
+            <h2>المتقدمة</h2>
+            <p>مصمم لاحتياجات الشركات الصغيرة التي تحتاج سيولة أكبر و إدارة الإيرادات</p>
+            <h3>125 ريال شهريًا</h3>
+            <ul>
+                <li>مساعد ذكي</li>
+                <li>إدارة الإيرادات</li>
+                <li>دعم متقدم</li>
+            </ul>
+            <button>إشترك الآن</button>
+        </div>
+        <div class="plan free">
+            <h2>التجريبية</h2>
+            <p>يمكنك البدء بسهولة لتجربة إصدار الفواتير الرقمية.</p>
+            <h3>0 ريال</h3>
+            <ul>
+                <li>مساعد ذكي</li>
+                <li>إصدار يصل إلى 10 فواتير</li>
+            </ul>
+            <button>جرب الآن</button>
+        </div>
+    </section>
+    <section class="newsletter">
+        <p>كن على اطلاع مستمر حول عروضنا</p>
+        <input type="email" placeholder="Enter your email address">
+        <button>إشترك في النشرة البريدية</button>
+    </section>
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2025</p>
+        <nav>
+            <a href="#">الشروط والأحكام</a>
+            <a href="#">سياسة الخصوصية</a>
+        </nav>
+        <img src="C:\Users\asus\Desktop\صفحات فيجما\هيدر_إقرارك-removebg-preview-removebg-preview.png" alt="شعار إقرارك" class="logo">
+    </footer>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إقرارك - رمز التحقق</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #b0b0b0, #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .verification-box, .success-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 320px;
+            margin: auto;
+            border: 1px solid #0a2240;
+        }
+        .icon {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #0a2240;
+        }
+        p {
+            font-size: 14px;
+            color: #0a2240;
+        }
+        .otp-input {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .otp-input input {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            font-size: 18px;
+            border: 1px solid #0a2240;
+            border-radius: 5px;
+            color: #0a2240;
+            background-color: white;
+            font-weight: bold;
+        }
+        .otp-input input::placeholder {
+            color: #0a2240;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .resend-text {
+            font-size: 12px;
+            color: #0a2240;
+        }
+        #submit, #continue {
+            background: #b0b0b0;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="verification-box" id="verification-box">
+            <img src="mail-icon.png" alt="Mail Icon" class="icon">
+            <h2>أدخل رمز التحقق</h2>
+            <p>سيتم إرسال رمز التحقق إلى ******905</p>
+            <div class="otp-input">
+                <input type="text" maxlength="1" placeholder="*">
+                <input type="text" maxlength="1" placeholder="*">
+                <input type="text" maxlength="1" placeholder="*">
+                <input type="text" maxlength="1" placeholder="*">
+            </div>
+            <p class="resend-text">لم يصلك رمز التحقق؟ <a href="#" id="resend">إعادة إرسال</a></p>
+            <button id="submit">تأكيد</button>
+        </div>
+        <div class="success-box" id="success-box" style="display: none;">
+            <img src="success-icon.png" alt="Success Icon" class="icon">
+            <h2>تم التحقق بنجاح</h2>
+            <p>شكراً لك! لقد تم التحقق من حسابك بنجاح.</p>
+            <button id="continue">متابعة</button>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.otp-input input').forEach((input, index, inputs) => {
+            input.addEventListener('input', (e) => {
+                if (e.target.value && index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+            });
+        });
+
+        document.getElementById('submit').addEventListener('click', () => {
+            document.getElementById('verification-box').style.display = 'none';
+            document.getElementById('success-box').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

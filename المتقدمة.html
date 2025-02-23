@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إقرارك - الدفع</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f8fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .box {
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 320px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .payment-box h2 {
+            color: #00796b;
+        }
+        .payment-box h3 {
+            color: #004d40;
+            font-size: 24px;
+        }
+        .payment-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        .form-box label {
+            display: block;
+            margin-top: 10px;
+            text-align: right;
+        }
+        .form-box input, .form-box select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-box button, .payment-box button {
+            background: #009688;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box form-box">
+            <form>
+                <label for="card">رقم البطاقة</label>
+                <input type="text" id="card" placeholder="1234 1234 1234 1234">
+                
+                <label for="expiry">تاريخ الانتهاء</label>
+                <input type="text" id="expiry" placeholder="MM / YY">
+                
+                <label for="cvc">CVC</label>
+                <input type="text" id="cvc" placeholder="CVC">
+                
+                <label for="country">الدولة</label>
+                <select id="country">
+                    <option>Saudi Arabia</option>
+                </select>
+                
+                <label for="postal">الرمز البريدي</label>
+                <input type="text" id="postal" placeholder="45718">
+                
+                <button type="submit">دفع</button>
+            </form>
+    <img src="C:\Users\asus\Desktop\صفحات فيجما\هيدر_إقرارك-removebg-preview-removebg-preview.png" alt="شعار إقرارك" class="logo">
+
+        </div>
+        <div class="box payment-box">
+            <h2>المتقدمة</h2>
+            <p>مصمم ليواكب احتياجات الشركات الصغيرة التي تبحث عن حلول إدارة وإقرار الوثائق</p>
+            <h3>125 ريال</h3>
+            <ul>
+                <li>✔ مساعد ذكي</li>
+                <li>✔ إدارة الإيرادات</li>
+                <li>✔ دعم متقدم</li>
+            </ul>
+            <button id="subscribe-btn">إشترك الآن</button>
+        </div>
+    </div>
+    <script>
+        document.querySelector("#subscribe-btn").addEventListener("click", function() {
+            alert("تم الاشتراك بنجاح!");
+        });
+    </script>
+</body>
+</html>
